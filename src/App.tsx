@@ -62,12 +62,13 @@ const Tasks = () => {
           Add
         </button>
       </div>
-      <ul>
+      <ul className='toDo--wrapper'>
         {tasks.map(task => (
           <li key={task.id} className={task.done ? 'done' : ''}>
             {editId === task.id ? (
-
-            <div className='toDo--item-wrapper'>
+              
+            <div className='toDo-item--wrapper'>
+              <hr></hr>
               <input value={editName} onChange={(e) => setEditName(e.target.value)}/>
               <button className='button' onClick={() => editTaskSave(task.id)}>Save</button>
               <button className='button' onClick={editTaskCancel}>Cancel</button>
@@ -75,8 +76,12 @@ const Tasks = () => {
 
             ) : (
 
-            <div className='toDo--item-wrapper'>
+            <div className='toDo-item--wrapper'>
+              <hr></hr>
               <h2>{task.name}</h2>
+              <div className='interact--wrapper'>
+
+              </div>
               <button className='button' onClick={() => deleteTask(task.id)}>Delete</button>
               <button className='button' onClick={() => editTask(task.id, task.name)}>Edit</button>
               <input type="checkbox" checked={task.done} onChange={() => completeTask(task.id)}/>

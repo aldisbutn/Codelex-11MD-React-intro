@@ -5,51 +5,23 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
 .done {
   text-decoration: line-through;
 }
 
+li {
+  width: 100%;
+}
 .heading1 {
   font-size: 40px;
 }
 
 .add-task--wrapper {
+  width: 1200px;
+  height: 600px;
+  padding: 40px;
+  background-color: rgb(29, 28, 26);
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,11 +33,25 @@
 }
 
 .toDo--item-wrapper {
+  width: 1000px;
   display: flex;
   gap: 10px;
 }
 
 .button {
+  background-color: rgb(64, 113, 168);
   padding: 10px;
   font-size: 20px;
+}
+
+.interact--wrapper {
+  display: flex;
+}
+
+.toDo--wrapper{
+  height: 600px;
+  width: 1000px;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
 }
