@@ -12,7 +12,7 @@ const Tasks = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [editId, setEditId] = useState<number | null>(null);
   const [editName, setEditName] = useState<string>('');
-  const [nextId, setNextId] = useState<number>(0);
+  const [nextId, setNextId] = useState<number>(1);
 
   const addTask = () => {
     setTasks([...tasks, { id: nextId, name: name, done: false }]);
