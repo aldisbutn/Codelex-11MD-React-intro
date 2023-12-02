@@ -70,8 +70,10 @@ const Tasks = () => {
             <div className='toDo-item--wrapper'>
               <hr></hr>
               <input value={editName} onChange={(e) => setEditName(e.target.value)}/>
-              <button className='button' onClick={() => editTaskSave(task.id)}>Save</button>
-              <button className='button' onClick={editTaskCancel}>Cancel</button>
+              <div className='interact--wrapper'>
+                <button className='button' onClick={() => editTaskSave(task.id)}>Save</button>
+                <button className='button' onClick={editTaskCancel}>Cancel</button>
+              </div>
             </div>
 
             ) : (
@@ -80,11 +82,11 @@ const Tasks = () => {
               <hr></hr>
               <h2>{task.name}</h2>
               <div className='interact--wrapper'>
-
+                <button className='button' onClick={() => deleteTask(task.id)}>Delete</button>
+                <button className='button' onClick={() => editTask(task.id, task.name)}>Edit</button>
+                <input type="checkbox" checked={task.done} onChange={() => completeTask(task.id)}/>
               </div>
-              <button className='button' onClick={() => deleteTask(task.id)}>Delete</button>
-              <button className='button' onClick={() => editTask(task.id, task.name)}>Edit</button>
-              <input type="checkbox" checked={task.done} onChange={() => completeTask(task.id)}/>
+              
             </div>
             )}
           </li>

@@ -46,6 +46,7 @@ li {
 
 .interact--wrapper {
   display: flex;
+  justify-content: flex-end;
 }
 
 .toDo--wrapper{
